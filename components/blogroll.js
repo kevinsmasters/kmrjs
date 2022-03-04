@@ -1,7 +1,8 @@
 export default function BlogRoll() {
     return (
       <>
-        <div className="container px-4 py-5 mt-5 mb-3" id="hanging-icons">
+      <a name="stories"></a>
+        <div className="container px-4 py-5 mt-5 mb-3">
           <h2 className="pb-2">Stories</h2>
           <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div className="col d-flex align-items-start">

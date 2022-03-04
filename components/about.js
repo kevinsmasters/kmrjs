@@ -1,5 +1,7 @@
 export default function About() {
     return (
+        <>
+        <a name="mission"></a>
         <div className="row mb-3 mt-5">
 
             <div className="col-md-2"></div>
@@ -12,5 +14,6 @@ export default function About() {
             </div>
             <div className="col-md-2"></div>
         </div>
+        </>
     )
 }

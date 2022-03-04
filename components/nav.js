@@ -22,7 +22,7 @@ export default function MainNav() {
                 <div className="collapse navbar-collapse" id="navbarColor02">
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
-                            <Link href="#">
+                            <Link href="#top">
                                 <a className="nav-link active">Home
                             </a>
                             </Link>
@@ -42,6 +42,12 @@ export default function MainNav() {
                         <li className="nav-item">
                             <Link href="#stories">
                                 <a className="nav-link active">Stories
+                                </a>
+                            </Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link href="#contact">
+                                <a className="nav-link active">Contact
                                 </a>
                             </Link>
                         </li>

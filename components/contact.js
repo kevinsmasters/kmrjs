@@ -1,6 +1,7 @@
 export default function Contact() {
     return(
         <>
+        <a name="contact"></a>
         <div className="row mb-3 mt-5">
             <div className="col-md-3"></div>
             <div className="col-md-6">

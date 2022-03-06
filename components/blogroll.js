@@ -6,7 +6,7 @@ export default function BlogRoll() {
           <h2 className="pb-2">Stories</h2>
           <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div className="col d-flex align-items-start">
-              <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <div className="icon-square bg-light-gy text-dark flex-shrink-0 me-3">
                 <svg
                   className="bi"
                   width="1em"
@@ -25,13 +25,13 @@ export default function BlogRoll() {
                   We'll add onto it with another sentence and probably just keep
                   going until we run out of words.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Primary button
+                <a href="#" className="btn btn-dark-navy">
+                  Read on...
                 </a>
               </div>
             </div>
             <div className="col d-flex align-items-start">
-              <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <div className="icon-square bg-light-gy text-dark flex-shrink-0 me-3">
                 <svg
                   className="bi"
                   width="1em"
@@ -49,13 +49,13 @@ export default function BlogRoll() {
                   We'll add onto it with another sentence and probably just keep
                   going until we run out of words.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Primary button
+                <a href="#" className="btn btn-dark-navy">
+                Read on...
                 </a>
               </div>
             </div>
             <div className="col d-flex align-items-start">
-              <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
+              <div className="icon-square bg-light-gy text-dark flex-shrink-0 me-3">
                 <svg
                   className="bi"
                   width="1em"
@@ -72,14 +72,37 @@ export default function BlogRoll() {
                   We'll add onto it with another sentence and probably just keep
                   going until we run out of words.
                 </p>
-                <a href="#" className="btn btn-primary">
-                  Primary button
+                <a href="#" className="btn btn-dark-navy">
+                Read on...
                 </a>
               </div>
             </div>
           </div>
           <p><a href="#">Read All</a></p>
         </div>
+        <style jsx>
+          {`
+          .icon-square {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            border-radius: 0.75rem;
+        }
+        .bg-light-gy {
+          background-color: rgba(238,232,213,.50);
+        }
+        .btn-dark-navy {
+          background-color: #121432;
+          color: rgba(238,232,213,.75);
+        }
+        .btn-dark-navy:hover {
+          background-color: #4a4a6c;
+        }
+          `}
+          </style>
       </>
     );
 }

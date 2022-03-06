@@ -3,12 +3,14 @@ import Image from 'next/image'
 
 export default function MainNav() {
     return(
-        <nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
+        <div id="mainNav">
+
+<nav className="navbar navbar-expand-lg fixed-top navbar-dark bg-dark-nu">
             <div className="container">
                 <Link href="#">
-                <a className="navbar-brand">
+                <a className="navbar-brand pt-1 pb-0">
                     <Image
-                        src="/images/tiki.png" // Route of the image file
+                        src="/images/tiki-rev.png" // Route of the image file
                         height={50} // Desired size with correct aspect ratio
                         width={43} // Desired size with correct aspect ratio
                         alt="Kevin Masters Web Developer"
@@ -23,31 +25,31 @@ export default function MainNav() {
                     <ul className="navbar-nav me-auto">
                         <li className="nav-item">
                             <Link href="#top">
-                                <a className="nav-link active">Home
+                                <a className="nav-link">Home
                             </a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="#mission">
-                                <a className="nav-link active">Mission
+                                <a className="nav-link">Mission
                                 </a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="#projects">
-                                <a className="nav-link active">Projects
+                                <a className="nav-link">Projects
                                 </a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="#stories">
-                                <a className="nav-link active">Stories
+                                <a className="nav-link">Stories
                                 </a>
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link href="#contact">
-                                <a className="nav-link active">Contact
+                                <a className="nav-link">Contact
                                 </a>
                             </Link>
                         </li>
@@ -62,13 +64,8 @@ export default function MainNav() {
                 </ul>
                 </div>
             </div>
-            
-      <style jsx>{`
-        .navbar-brand {
-            background-color: rgba(255,255,255,.55);
-        }
-        `}</style>
-        </nav>
+        </nav>    
+        </div>
         
     )
 }

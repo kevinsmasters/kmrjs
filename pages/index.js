@@ -1,4 +1,3 @@
-import "bootswatch/dist/solar/bootstrap.min.css";
 import MainNav from "../components/nav";
 import HomeHero from "../components/homeHero";
 import About from "../components/about";
@@ -24,8 +23,9 @@ export default function Home() {
           <Projects />
           <BlogRoll />
           <Contact />
+          
         </main>
-
+        <div id="palmBg"></div>
         <Footer />
       </div>
       <style jsx>{`

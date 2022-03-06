@@ -1,6 +1,6 @@
 export default function HomeHero() {
     return(
-        <div className="bg-dark text-secondary px-4 py-5 text-center">
+        <div className="bg-dark-nu text-secondary px-4 py-5 text-center" id="homeHero">
             <div className="py-5">
             <h1 className="display-5 fw-bold text-white">Kevin Masters</h1>
             <div className="col-lg-6 mx-auto">

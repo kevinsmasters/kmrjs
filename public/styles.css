@@ -1,10 +1,14 @@
 body {
     background-color: #272846;
     color: #AFBBBB;
+    font-size: 1.4rem;
 }
 main {
     position: relative;
     z-index: 10;
+}
+main #h1, main h2, main h3 {
+    color: #fff;
 }
 #palmBg {
     position:fixed;

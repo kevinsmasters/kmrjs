@@ -10,15 +10,15 @@ export default function Contact() {
                 <form>
                 <fieldset>
                 <div className="form-group">
-                    <label for="inputName" className="form-label mt-4">Name</label>
+                    <label htmlFor="inputName" className="form-label mt-4">Name</label>
                     <input type="text" className="form-control" id="inputName" placeholder="Enter name" />
                   </div>
                   <div className="form-group">
-                    <label for="inputEmail1" className="form-label mt-4">Email address</label>
+                    <label htmlFor="inputEmail1" className="form-label mt-4">Email address</label>
                     <input type="email" className="form-control" id="inputEmail1" placeholder="Enter email" />
                   </div>
                   <div className="form-group">
-                    <label for="exampleTextarea" className="form-label mt-4">Message</label>
+                    <label htmlFor="exampleTextarea" className="form-label mt-4">Message</label>
                     <textarea className="form-control" id="exampleTextarea" rows="3"></textarea>
                   </div>
                   

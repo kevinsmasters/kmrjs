@@ -31,7 +31,7 @@ export default function MainNav() {
                         </li>
                         <li className="nav-item">
                             <Link href="#mission">
-                                <a className="nav-link">Mission
+                                <a className="nav-link">About
                                 </a>
                             </Link>
                         </li>
@@ -40,13 +40,13 @@ export default function MainNav() {
                                 <a className="nav-link">Projects
                                 </a>
                             </Link>
-                        </li>
+                        </li>{/* 
                         <li className="nav-item">
                             <Link href="#stories">
                                 <a className="nav-link">Stories
                                 </a>
                             </Link>
-                        </li>
+                        </li>*/}
                         <li className="nav-item">
                             <Link href="#contact">
                                 <a className="nav-link">Contact

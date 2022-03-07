@@ -9,6 +9,12 @@ export default function Contact() {
     inputEmail: '',
     textarea: ''
   });
+  function clearFields(event) {
+    // we have to convert event.target to array
+    // we use from method to convert event.target to array
+    // after that we will use forEach function to go through every input to clear it
+    Array.from(event.target).forEach((e) => (e.value = ""));
+  }
   const onSubmit = (e) => {
     e.preventDefault();
     send(
@@ -19,6 +25,11 @@ export default function Contact() {
     )
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        // clear the fields
+        clearFields(e);
+        setToSend({inputName: ''});
+        setToSend({inputEmail: ''});
+        setToSend({textarea: '' });
       })
       .catch((err) => {
         console.log('FAILED...', err);
@@ -27,6 +38,7 @@ export default function Contact() {
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
+  
     return(
         <>
         <a name="contact"></a>
@@ -45,7 +57,7 @@ export default function Contact() {
                       id="inputName" 
                       placeholder="Enter name" 
                       name="inputName"
-                      value={toSend.inputName}
+                      value={toSend.inputName || ''}// or nothing so don't get warning when reset state
                       onChange={handleChange} 
                     />
                   </div>
@@ -57,7 +69,7 @@ export default function Contact() {
                       id="inputEmail" 
                       name="inputEmail"
                       placeholder="Enter email" 
-                      value={toSend.email}
+                      value={toSend.email || ''} 
                       onChange={handleChange}
                     />
                   </div>
@@ -68,19 +80,30 @@ export default function Contact() {
                       id="textarea" 
                       rows="3"
                       name="textarea"
-                      value={toSend.textarea}
+                      value={toSend.textarea || ''} 
                       onChange={handleChange}
                     >
                       </textarea>
                   </div>
                   
-                  <button type="submit" className="btn btn-primary mt-4">Submit</button>
+                  <button type="submit" className="btn btn-dark-navy mt-4">Submit</button>
                 </fieldset>
               </form>
                 
                 </div>
             <div className="col-md-3"></div>
         </div>
+        <style jsx>
+          {`
+          .btn-dark-navy {
+            background-color: #121432;
+            color: rgba(238,232,213,.75);
+          }
+          .btn-dark-navy:hover {
+            background-color: #4a4a6c;
+          }
+          `}
+          </style>
         </>
     )
 }

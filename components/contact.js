@@ -69,7 +69,7 @@ export default function Contact() {
                       id="inputEmail" 
                       name="inputEmail"
                       placeholder="Enter email" 
-                      value={toSend.email || ''} 
+                      value={toSend.inputEmail || ''} 
                       onChange={handleChange}
                     />
                   </div>

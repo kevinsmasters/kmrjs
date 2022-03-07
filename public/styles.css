@@ -37,4 +37,7 @@ main #h1, main h2, main h3 {
 #homeHero.bg-dark-nu {
     background-color: #1C1D31;
 }
-
+footer#contact {
+    position: relative;
+    z-index: 10;
+}

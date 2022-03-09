@@ -97,7 +97,7 @@ export default function Contact() {
             <div className="col-md-3"></div>
         </div>
         
-        { showModal ? <Modal /> : null }
+        { showModal ? <Modal stateChanger={setShowModal} /> : null }
         
 
         <style jsx>

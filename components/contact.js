@@ -1,6 +1,7 @@
 import { send } from 'emailjs-com';
 import { useState } from 'react';
 import{ init } from '@emailjs/browser';
+import Modal from "./modal";
 
 export default function Contact() {
   init("18q8DZQ5-7NPEk1KH");
@@ -9,6 +10,7 @@ export default function Contact() {
     inputEmail: '',
     textarea: ''
   });
+  const [showModal, setShowModal] = useState( false );
   function clearFields(event) {
     // we have to convert event.target to array
     // we use from method to convert event.target to array
@@ -30,6 +32,7 @@ export default function Contact() {
         setToSend({inputName: ''});
         setToSend({inputEmail: ''});
         setToSend({textarea: '' });
+        setShowModal(true);
       })
       .catch((err) => {
         console.log('FAILED...', err);
@@ -93,6 +96,10 @@ export default function Contact() {
                 </div>
             <div className="col-md-3"></div>
         </div>
+        
+        { showModal ? <Modal stateChanger={setShowModal} /> : null }
+        
+
         <style jsx>
           {`
           .btn-dark-navy {

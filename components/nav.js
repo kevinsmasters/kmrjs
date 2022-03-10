@@ -1,7 +1,9 @@
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import { useState } from 'react';
+import Image from 'next/image';
 
 export default function MainNav() {
+    const [toggleMenu, setToggleMenu] = useState( false );
     return(
         <div id="mainNav">
 
@@ -17,12 +19,20 @@ export default function MainNav() {
                     />
                 </a>
                 </Link>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+                <button 
+                    className="navbar-toggler" 
+                    type="button" data-bs-toggle="collapse" 
+                    data-bs-target="#navbarColor02" 
+                    aria-controls="navbarColor02" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation"
+                    onClick = {()=> setToggleMenu(toggleMenu ? false : true)}
+                >
                 <span className="navbar-toggler-icon"></span>
                 </button>
-
-                <div className="collapse navbar-collapse" id="navbarColor02">
-                    <ul className="navbar-nav me-auto">
+                <div className={`collapse navbar-collapse ${toggleMenu ? "show" : ""}`} id="navbarColor02">
+                    <ul className="navbar-nav me-auto" 
+                    onClick = {()=> setToggleMenu(toggleMenu ? false : true)}>
                         <li className="nav-item">
                             <Link href="#top">
                                 <a className="nav-link">Home

@@ -29,11 +29,12 @@ export default function Home() {
           <Projects />{/* 
           <BlogRoll />*/}
           <Contact />
-          <Console log='Now, this is a story all about how' />
-          <Console log='my life got flipped - turned upside down' />
-          <Console log="And I'd like to take a minute" />
-          <Console log="Just sit right there" />
-          <Console log="I'll tell you how I became the prince of a town called Bel-Air" />
+          <Console log='Rather be in Richmond with all the hail and rain' />
+          <Console log="Than to be in Georgia boys wearin' that ball and chain" />
+          <Console log="Won't get drunk no more" />
+          <Console log="Won't get drunk no more" />
+          <Console log="Won't get drunk no more" />
+          <Console log="Way down the Old Plank Road" />
         </main>
         <div id="palmBg"></div>
         <Footer />

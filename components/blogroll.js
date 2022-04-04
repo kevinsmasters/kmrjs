@@ -1,10 +1,61 @@
-export default function BlogRoll() {
-    return (
-      <>
+import Image from "next/image";
+import Link from "next/link";
+import BlogIcon from "./BlogIcon";
+
+const BlogRoll = ({ posts }) => {
+  return (
+    <>
       <a name="stories"></a>
-        <div className="container px-4 py-5 mt-5 mb-3">
-          <h2 className="pb-2">Stories</h2>
-          <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
+      <div className="container px-4 py-5 mt-5 mb-3">
+        <h2 className="pb-2">Stories</h2>
+        <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          {posts.map((post, index) => (
+            <div className="col d-flex align-items-start">
+              <div className="icon-square bg-light-gy text-dark flex-shrink-0 me-3">
+                <BlogIcon />
+              </div>
+              <div>
+                <h3>{post.frontMatter.title}</h3>
+                <p>{post.frontMatter.description}</p>
+                <Link href={"/blog/" + post.slug} passHref key={index}>
+                  <a href="#" className="btn btn-dark-navy">
+                    Read on...
+                  </a>
+                </Link>
+              {/* <Link href={"/blog/" + post.slug} passHref key={index}>
+                <div className="card mb-3 pointer" style={{ maxWidth: "540px" }}>
+                  <div className="row g-0">
+                    <div className="col-md-8">
+                      <div className="card-body">
+                        <h5 className="card-title">{post.frontMatter.title}</h5>
+                        <p className="card-text">
+                          {post.frontMatter.description}
+                        </p>
+                        <p className="card-text">
+                          <small className="text-muted">
+                            {post.frontMatter.date}
+                          </small>
+                        </p>
+                      </div>
+                    </div>
+                    <div className="col-md-4 m-auto">
+                      <Image
+                        src={post.frontMatter.thumbnailUrl}
+                        className="img-fluid mt-1 rounded-start"
+                        alt="thumbnail"
+                        width={500}
+                        height={400}
+                        objectFit="cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Link> */}
+              </div>
+            </div>
+          ))}
+        </div>
+        {/* <div className="row g-4 py-5 row-cols-1 row-cols-lg-3">
             <div className="col d-flex align-items-start">
               <div className="icon-square bg-light-gy text-dark flex-shrink-0 me-3">
                 <svg
@@ -77,11 +128,13 @@ export default function BlogRoll() {
                 </a>
               </div>
             </div>
-          </div>
-          <p><a href="#">Read All</a></p>
-        </div>
-        <style jsx>
-          {`
+          </div> */}
+        <p>
+          <a href="#">Read All</a>
+        </p>
+      </div>
+      <style jsx>
+        {`
           .icon-square {
             display: inline-flex;
             align-items: center;
@@ -90,19 +143,21 @@ export default function BlogRoll() {
             height: 3rem;
             font-size: 1.5rem;
             border-radius: 0.75rem;
-        }
-        .bg-light-gy {
-          background-color: rgba(238,232,213,.50);
-        }
-        .btn-dark-navy {
-          background-color: #121432;
-          color: rgba(238,232,213,.75);
-        }
-        .btn-dark-navy:hover {
-          background-color: #4a4a6c;
-        }
-          `}
-          </style>
-      </>
-    );
-}
+          }
+          .bg-light-gy {
+            background-color: rgba(238, 232, 213, 0.5);
+          }
+          .btn-dark-navy {
+            background-color: #121432;
+            color: rgba(238, 232, 213, 0.75);
+          }
+          .btn-dark-navy:hover {
+            background-color: #4a4a6c;
+          }
+        `}
+      </style>
+    </>
+  );
+};
+
+export default BlogRoll;

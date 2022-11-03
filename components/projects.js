@@ -7,6 +7,26 @@ export default function Projects() {
             <div className="col-md-12"><h2 className="pb-2">Projects</h2></div>
         </div>
         <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div className="col">
+          <div className="card shadow-sm">
+            <a href="https://calculatorenator.netlify.app/" target="_blank">
+          <Image
+            src="/images/calc-thumb.png" // Route of the image file
+            height={120} // Desired size with correct aspect ratio
+            width={170} // Desired size with correct aspect ratio
+            alt="Calculatorenator"
+           />
+           </a>
+            <div className="card-body">
+              <p className="card-text">Calculator App coded in React. Design inspired by my favorite evil genius cartoon villan.</p>
+              <div className="d-flex justify-content-between align-items-center">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="col">
           <div className="card shadow-sm">
             <a href="https://github.com/kevinsmasters/ng-financial-chart" target="_blank">

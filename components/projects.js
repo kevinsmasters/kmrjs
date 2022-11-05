@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import styles from './Projects.module.css';
+
 export default function Projects() {
     return(
         <>
@@ -6,10 +8,10 @@ export default function Projects() {
         <div className="row mt-5 mb-3">
             <div className="col-md-12"><h2 className="pb-2">Projects</h2></div>
         </div>
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div className={styles.grid}>
 
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://calculatorenator.netlify.app/" target="_blank">
           <Image
             src="/images/calc-thumb.png" // Route of the image file
@@ -27,8 +29,8 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://github.com/kevinsmasters/ng-financial-chart" target="_blank">
           <Image
             src="/images/GitHub-Mark-120px.png" // Route of the image file
@@ -45,8 +47,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://rivertidejamaicaretreats.org/home" target="_blank">
           <Image
             src="/images/rivertide-jamaica.png" // Route of the image file
@@ -63,8 +65,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://github.com/kevinsmasters/asana-project-status" target="_blank">
           <Image
             src="/images/GitHub-Mark-120px.png" // Route of the image file
@@ -82,8 +84,8 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://www.taconic.com/quality/animal-health/health-standards/health-standard-selector/" target="_blank">
           <Image
             src="/images/taconic-health-standard-selector.png" // Route of the image file
@@ -100,8 +102,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://research.amnh.org/paleontology/perissodactyl/" target="_blank">
           <Image
             src="/images/amnh-perissodactyls.png" // Route of the image file
@@ -118,8 +120,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://ulstercountyny.gov/" target="_blank">
           <Image
             src="/images/ulstercounty-ny.png" // Route of the image file
@@ -137,8 +139,8 @@ export default function Projects() {
           </div>
         </div>
 
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://www.taconic.com/resources/" target="_blank">
           <Image
             src="/images/taconic-resources.png" // Route of the image file
@@ -155,8 +157,8 @@ export default function Projects() {
             </div>
           </div>
         </div>
-        <div className="col">
-          <div className="card shadow-sm">
+        <div className="g-col-6 g-col-md-4">
+          <div className={"card shadow-sm " + styles.card}>
             <a href="https://crossvalleyhealth.com/" target="_blank">
           <Image
             src="/images/cross-valley.png" // Route of the image file
@@ -193,14 +195,7 @@ export default function Projects() {
         */ }
       </div>
       <style jsx>{`
-        .card {
-          align-content: center;
-          text-align: center;
-          padding-top: 1rem;
-        }
-        .card img {
-          text-align: center;
-        }
+        
         `}</style>
       </>
     )

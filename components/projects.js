@@ -8,7 +8,7 @@ export default function Projects() {
         <div className="row mt-5 mb-3">
             <div className="col-md-12"><h2 className="pb-2">Projects</h2></div>
         </div>
-        <div className={styles.grid}>
+        <div className={styles.grid + " grid"}>
 
         <div className="g-col-6 g-col-md-4">
           <div className={"card shadow-sm " + styles.card}>
@@ -195,7 +195,16 @@ export default function Projects() {
         */ }
       </div>
       <style jsx>{`
-        
+        @media (max-width: 990px) {
+          .grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+        @media (max-width: 768px) {
+          .grid {
+            grid-template-columns: 1fr;
+          }
+        }
         `}</style>
       </>
     )

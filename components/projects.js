@@ -23,8 +23,8 @@ export default function Projects() {
             </a>
             <div className="card-body">
               <p className="card-text">
-                Calculator App coded in React. It is based on a project I did
-                for freeCodeCamp Front End Development Libraries certification.
+                Calculator App coded in React and based on a project for
+                freeCodeCamp Front End Development Libraries certification.
               </p>
               <div className="d-flex justify-content-between align-items-center"></div>
             </div>
